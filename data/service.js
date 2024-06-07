@@ -15,52 +15,52 @@ export const MyServices = [
     titleBlack: "My",
     titlePrimary: "Services",
     description:
-      "My intention at the heart is just putting some positive effort into something, valuable to someone or everyone",
+      "Intention in my heart is just putting some positive effort into something, valuable to someone or everyone",
   },
   {
     icon: <Code color="primary" />,
     title: "Full-stack software development",
     description:
-      "I specialize in full stack development, combining front-end and back-end expertise to create comprehensive digital solutions.",
+      "Full stack development, combining front-end and back-end, I'm capable of creating comprehensive digital solutions.",
   },
   {
     icon: <GridViewSharp color="primary" />,
     title: "Front-end Development",
     description:
-      "I specialize in front-end development services customized to your  preferences. Let's collaborate to create a stunning and user-friendly  digital experience for your project!",
+      "Specialized, in front-end development which can be customized to any business preference. My service here create a stunning and user-friendly  digital experience for your project.",
   },
   {
     icon: <Api color="primary" />,
     title: "Api Development",
     description:
-      "I specialize in designing and building robust and efficient APIs to power your applications.",
+      "I'm also capable in designing and building robust and efficient API's to power your applications and business need.",
   },
 
   {
     icon: <Cloud color="primary" />,
     title: "AWS Cloud Computing",
     description:
-      "I specialize in leveraging AWS cloud computing services to optimize your infrastructure and enhance scalability.",
+      "I'm certified AWS practioner, i use AWS cloud tools to optimize infrastructures and enhance scalability of digital products.",
   },
 
   {
     icon: <Support color="primary" />,
     title: "Project Management",
     description:
-      "I can help you manage your projects effectively by coordinating tasks,  resources, and timelines. Let's work together to ensure your projects  are completed successfully and on schedule!",
+      "I'm certified Agile project manager, i help businesses manage their projects effectively by coordinating tasks,  resources, and timelines",
   },
 
   {
     icon: <AnalyticsSharp color="primary" />,
     title: "IT Consulting",
     description:
-      "I specialize in full stack development, combining front-end and back-end expertise to create comprehensive digital solutions.",
+      "My experiance as a fullstack engineer gaves me the advantage of being a consultant, beacause engineering all about providing solution, i know in and out of how a business can succeed over the internet.",
   },
 
   {
     icon: <DesignServices color="primary" />,
     title: "UI/UX Design",
     description:
-      "I  specialize in crafting engaging and intuitive user interfaces to  enhance the overall user experience. Let's collaborate to create  visually appealing designs that resonate with your audience!",
+      "I'm certified UI/UX Designer from google, if you need a best UX for your product, I'm the one who can clearly identify and change the  customer need to actual product design ",
   },
 ];

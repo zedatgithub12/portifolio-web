@@ -1,7 +1,7 @@
 export const Personally = [
   {
     description:
-      "Goal-oriented, and determined to succeed. I possess a strong desire  to achieve their dreams and are willing to put in the hard work and  dedication required to reach my objectives. focused, resilient, and willing to take risks in pursuit of their  goals. ",
+      "I'm goal-oriented, individual who possess a strong dedication to achieve my dreams and willing to put in the hard work and  commitment required to reach my objectives. focused, resilient, and willing to take risks in pursuit of anything i belived in",
 
     loved: [
       "Hiking",

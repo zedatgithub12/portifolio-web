@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { ProjectsData } from "@/data/projects";
-import { Box, Chip, Grid, IconButton, Link, useTheme } from "@mui/material";
+import { Box, Grid, IconButton, Link, useTheme } from "@mui/material";
 import {
   Check,
   CheckCircle,
-  ChevronLeftRounded,
   ChevronRight,
   Groups,
   LinkSharp,
   PrivacyTip,
-  Shield,
-  ShieldSharp,
 } from "@mui/icons-material";
+import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const theme = useTheme();
   const [expand, setExpand] = useState(0);
+
+  const ref = useRef();
+  const inView = UseIntersectionObserver(ref);
 
   const handleExpanding = (index) => {
     if (expand === index) {
@@ -26,7 +28,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects">
+    <div id="projects" ref={ref}>
       <Grid container justifyContent="center" marginY={20}>
         <Grid
           xs={9}
@@ -63,45 +65,57 @@ export default function Projects() {
               </p>
 
               {ProjectsData?.map((project, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    backgroundColor:
-                      expand === index
-                        ? theme.palette.primary.main
-                        : theme.palette.primary.contrastText,
-                    border: 1,
-                    borderColor: theme.palette.primary.main,
-                    borderRadius: 3,
-                    marginTop: 3,
-                    transition: "all 1s ease",
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={
+                    inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
+                  }
+                  transition={{
+                    duration: 0.5,
+                    type: "spring",
+                    stiffness: 110,
+                    damping: 30,
+                    delay: index * 0.1,
                   }}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => handleExpanding(index)}
                 >
                   <Box
+                    key={index}
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      paddingX: 0.5,
+                      backgroundColor:
+                        expand === index
+                          ? theme.palette.primary.main
+                          : theme.palette.primary.contrastText,
+                      border: 1,
+                      borderColor: theme.palette.primary.main,
+                      borderRadius: 3,
+                      marginTop: 3,
+                      transition: "all 1s ease",
                     }}
                   >
-                    <p class="text-1xl font-bold p-3">{project.title}</p>
-                    <IconButton onClick={() => handleExpanding(index)}>
-                      {expand === index ? (
-                        <Check
-                          fontSize="small"
-                          sx={{ color: theme.palette.background.default }}
-                        />
-                      ) : (
-                        <ChevronRight fontSize="small" />
-                      )}
-                    </IconButton>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        paddingX: 0.5,
+                      }}
+                    >
+                      <p class="text-1xl font-bold p-3">{project.title}</p>
+                      <IconButton>
+                        {expand === index ? (
+                          <Check
+                            fontSize="small"
+                            sx={{ color: theme.palette.background.default }}
+                          />
+                        ) : (
+                          <ChevronRight fontSize="small" />
+                        )}
+                      </IconButton>
+                    </Box>
                   </Box>
-
-                  {/* {expand === index && (
-                    <p class="text-1xl  p-3">{project.description}</p>
-                  )} */}
-                </Box>
+                </motion.div>
               ))}
             </Grid>
             <Grid

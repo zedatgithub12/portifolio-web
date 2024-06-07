@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const TextSlideUp = ({ words, animationDuration }) => {
+const TextSlideUp = ({ words, animationDuration, sx }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -20,9 +20,14 @@ const TextSlideUp = ({ words, animationDuration }) => {
     >
       {words.map((word, index) => (
         <motion.span
-          class="text-5xl font-bold"
           key={index}
-          style={{ position: "absolute", lineHeight: 1.2, overflow: "hidden" }}
+          class="text-5xl font-bold"
+          style={{
+            position: "absolute",
+            lineHeight: 1.2,
+            overflow: "hidden",
+            ...sx,
+          }}
           initial={{
             y: index === currentWordIndex ? -100 : 0,
             opacity: index === currentWordIndex ? 1 : 0,

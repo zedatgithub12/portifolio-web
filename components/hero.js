@@ -3,7 +3,7 @@ import { CircleRounded } from "@mui/icons-material";
 import { Grid, Box, Typography } from "@mui/material";
 
 const words = ["Designing", "Development", "Testing"];
-const animationDuration = 0.8;
+const animationDuration = 0.7;
 
 export default function Hero() {
   return (
@@ -38,26 +38,31 @@ export default function Hero() {
             </Box>
 
             <p className="pt-8 text-5xl font-bold my-3">Let's Collaborate on</p>
-            <TextSlideUp words={words} animationDuration={animationDuration} />
+            <TextSlideUp
+              words={words}
+              animationDuration={animationDuration}
+              sx={{ background: "-webkit-linear-gradient(#2FD236, #7edb08)" }}
+            />
             <p variant="subtitle" className="mt-20 ">
               If you are looking for someone who have hand on experience in all
-              SDLC you are at the right place. just press the button below
+              SDLC you are at the right place. Just contact me
             </p>
 
             <div class="pt-14">
-              <button
+              <a
+                href="#contact"
                 class="button-19 bg-gradient-to-r from-green-500 to-green-300 hover:from-green-700 hover:to-green-500 text-dark text-xl font-bold py-3 px-10 rounded-full shadow-lg"
-                role="button"
               >
                 Contact me
-              </button>
+              </a>
 
-              <button
-                variant="contained"
-                class="text-primary hover:text-green-500  font-bold py-3 mx-10"
+              <a
+                href="/About.js"
+                className="text-primary hover:text-green-500  font-bold py-3 mx-10"
+                download
               >
                 Download resume
-              </button>
+              </a>
             </div>
           </Grid>
           <Grid xs={11} sm={11} md={6} lg={6}>

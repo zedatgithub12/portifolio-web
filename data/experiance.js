@@ -6,10 +6,10 @@ export const Experiance = [
     start: "Jul, 2022",
     end: "Present",
     actions: [
-      "Lead Projects at the company level",
-      "Published second version of Place to be Ethiopia mobile app",
-      "Lead the development of a training management system  for the minister of justice.",
-      "In charge of building and managing projects starting  from designing to deployment phase.",
+      "Co-authored the company coding standard",
+      "Leading frontend projects and closely working with backend developers",
+      "Involved more in engagement with clients.",
+      "Mentoring fellow developers on how to write efficient and quality code.",
     ],
   },
 
@@ -20,24 +20,23 @@ export const Experiance = [
     start: "May, 2023",
     end: "Sep, 2023",
     actions: [
-      "Lead Projects at the company level",
-      "Published second version of Place to be Ethiopia mobile app",
-      "Lead the development of a training management system  for the minister of justice.",
-      "In charge of building and managing projects starting  from designing to deployment phase.",
+      "Collaborated with the client to understand their need and convert it to the actual product",
+      "Designed the UI/UX of the project",
+      "Lead the development of the product frontend and backend",
+      "Deployed the product and i have been system admin for six months",
     ],
   },
 
   {
     setup: "Onsite",
     from: "Afromina",
-    what: "Web Developer",
+    what: "Frontend Developer",
     start: "Jul, 2022",
     end: "May, 2023",
     actions: [
-      "Lead Projects at the company level",
-      "Published second version of Place to be Ethiopia mobile app",
-      "Lead the development of a training management system  for the minister of justice.",
-      "In charge of building and managing projects starting  from designing to deployment phase.",
+      "Developed four web apps and two websites.",
+      "Developed & published a mobile app which has more than 10K downloads & 4.9 Rating",
+      "Worked to assess new standards, technologies, and trends in frontend development",
     ],
   },
 ];
