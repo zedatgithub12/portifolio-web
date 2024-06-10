@@ -17,7 +17,11 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/p2bapp1.jpg",
+      "/assets/snapshots/p2bapp2.jpg",
+      "/assets/snapshots/p2bapp4.jpg",
+    ],
   },
 
   {
@@ -27,7 +31,7 @@ export const ProjectsData = [
     logo: "",
     role: "Lead developer",
     status: "Completed",
-    available: "Confidential",
+    available: "Public",
 
     url: "https://placetobeethiopia.com/",
     stacks: [
@@ -41,7 +45,11 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/p2bweb.png",
+      "/assets/snapshots/p2bweb4.png",
+      "/assets/snapshots/p2bweb3.png",
+    ],
   },
 
   {
@@ -65,7 +73,11 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/addis1.jpg",
+      "/assets/snapshots/addis2.jpg",
+      "/assets/snapshots/addis3.jpg",
+    ],
   },
 
   {
@@ -88,7 +100,11 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/tms1.png",
+      "/assets/snapshots/tms2.png",
+      "/assets/snapshots/tms3.png",
+    ],
   },
 
   {
@@ -111,7 +127,38 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/sheket1.png",
+      "/assets/snapshots/sheket2.png",
+      "/assets/snapshots/sheket3.png",
+    ],
+  },
+
+  {
+    title: "Sheket Admin dashboard",
+    description:
+      "An admin dashboard developed for effective management of the goods delivery service the admins can create, update,process and delete the task related to the system operation",
+    logo: "",
+    role: "Full-stack developer",
+    status: "Completed",
+    available: "Confidential",
+    url: "https://admin.sheketdelivery.com/",
+    stacks: [
+      "/assets/stacks/html5.png",
+      "/assets/stacks/css.png",
+      "/assets/stacks/JS.png",
+      "/assets/stacks/reactjs.webp",
+      "/assets/stacks/axioss.png",
+      "/assets/stacks/laravel.png",
+      "/assets/stacks/Mysql_logo.png",
+      "/assets/stacks/github.png",
+      "/assets/stacks/git.png",
+    ],
+    screenshots: [
+      "/assets/snapshots/shadmin1.png",
+      "/assets/snapshots/shadmin2.png",
+      "/assets/snapshots/shadmin3.png",
+    ],
   },
 
   {
@@ -134,6 +181,10 @@ export const ProjectsData = [
       "/assets/stacks/github.png",
       "/assets/stacks/git.png",
     ],
-    screenshots: ["/assets/stacks/git.png"],
+    screenshots: [
+      "/assets/snapshots/surfie1.png",
+      "/assets/snapshots/surfie2.png",
+      "/assets/snapshots/surfie3.png",
+    ],
   },
 ];

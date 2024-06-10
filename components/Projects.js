@@ -238,11 +238,11 @@ export default function Projects() {
                       src={stack}
                       alt="tech stack"
                       style={{
-                        width: 160,
-                        height: 200,
+                        width: 222,
+                        height: 240,
                         aspectRatio: 1,
                         objectFit: "contain",
-                        margin: 10,
+                        margin: 6,
                       }}
                     />
                   ))}
