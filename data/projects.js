@@ -2,7 +2,7 @@ export const ProjectsData = [
   {
     title: "Place to be Ethiopia Mobile app",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer. Currently it is completed, deployed on Google Playstore and it have more than 10K downloads with average 4.8 rating.",
     logo: "",
     role: "Product Owner  & Full-stack developer",
     status: "Completed",
@@ -27,7 +27,7 @@ export const ProjectsData = [
   {
     title: "Place to be Ethiopia Web app",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "It is an event promotion and ticket selling web platform, which i built after the mobile app, I used Reactjs, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer. Currently, it is completed, deployed on hahucloud, you can check it out following the link below",
     logo: "",
     role: "Lead developer",
     status: "Completed",
@@ -55,7 +55,7 @@ export const ProjectsData = [
   {
     title: "Addis Chircharo POS  system",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "It is a point of sale system targeted to be implemented on more than 200 shops in addis ababa. and it has many integrated features that enable shop owners to create stores, assign sales,vset targets, manage stocks, track sales, generate reports in different formats and so many other features. That enables them to manage their business efficiently.",
     logo: "",
     role: "Full-stack developer",
     status: "Completed",
@@ -83,7 +83,7 @@ export const ProjectsData = [
   {
     title: "Minister of Justice Training management system",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "A web based training management system built for Minister of justice in collaboration with GIZ BMM, I was a lead developer and i had the opportunities to closely collaborate with client. The app was developed with reactjs, laravel, RESTApi and MYSQL as a database. It was completed with high quality and the client were so satisfaied with what we delivered",
     logo: "",
     role: "Lead developer",
     status: "Completed",
@@ -110,7 +110,7 @@ export const ProjectsData = [
   {
     title: "Sheket Delivery",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "Sheket delivery is a web platform, where a list of commercially available goods get listed and promoted. The customer and easily get track of items price update, and order the goods they need for their retailing shops. I had the opportunity to collaborate with you entreprenuers, their effective collaboration and detailed insight was very motivating. The finally delivered product was very satisfying they payed me additional 25% of what we agreed on, I was very happy to see my clients satisfied like that.",
     logo: "",
     role: "Full-stack developer",
     status: "Completed",
@@ -137,7 +137,7 @@ export const ProjectsData = [
   {
     title: "Sheket Admin dashboard",
     description:
-      "An admin dashboard developed for effective management of the goods delivery service the admins can create, update,process and delete the task related to the system operation",
+      "An admin dashboard developed for effective management of the goods delivery service. The admins can create, update,process and delete the task related to the system operations",
     logo: "",
     role: "Full-stack developer",
     status: "Completed",
@@ -164,7 +164,7 @@ export const ProjectsData = [
   {
     title: "Surfie Ethiopia Parental Control",
     description:
-      "It is an event promotion and ticket selling platform, built with React native, RestApi, laravel and MYSQL database. I was both product manager and full-stack engineer on the project. This mobile app project is completed, deployed on Play store and it have more than 10K downloads with average 4.8 rating on google play store.",
+      "It is a platform built to facilitate the parental control service Afromina digital Technologies plc started in ethiopia in collaboration an Israel company name puresight, as i was requested to built a system that can clearly demonstrate their service and enable them to effectively manage the parents subscription and account management. I have bulit surfie ethiopia website, partners portal and admin dashboard",
     logo: "",
     role: "Full-stack developer",
     status: "Completed",

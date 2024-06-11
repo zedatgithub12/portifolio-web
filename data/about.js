@@ -17,7 +17,7 @@ export const Personally = [
 export const Professionally = [
   {
     description:
-      "Passionate about building exceptional user experiences, I am a skilled Frontend Engineer specializing in ReactJS and React Native. With a strong background in web development, I have an unwavering commitment to delivering high-quality code and intuitive designs",
+      "Passionate about building exceptional user experiences, I am a skilled Fullstack Engineer specializing in ReactJS and React Native. With a strong background in web development, I have an unwavering commitment to delivering high-quality code and intuitive designs",
 
     loved: ["Reading blogs", "Writting hypothesis", "Coding", "Taking Courses"],
   },

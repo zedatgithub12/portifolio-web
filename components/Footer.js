@@ -40,8 +40,8 @@ export default function Footer() {
         <Grid xs={12} sm={12} md={6} xl={4} lg={3}>
           <p className="text-2xl mb-4">Logo</p>
           <Typography variant="body" sx={{ marginTop: 4 }}>
-            If you are looking for someone who have hand on experience in all
-            SDLC you are at the right place. just press the button below
+            Delivering seamless digital solutions with expertise in both
+            frontend and backend development as a fullstack engineer
           </Typography>
         </Grid>
 
@@ -87,7 +87,11 @@ export default function Footer() {
                 rel="noreferrer"
                 className="m-2"
               >
-                <img src={socialMedia.logo} alt={socialMedia.name} />
+                <img
+                  src={socialMedia.logo}
+                  alt={socialMedia.name}
+                  style={{ width: 30, height: 30 }}
+                />
               </a>
             ))}
           </Box>

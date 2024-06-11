@@ -7,8 +7,8 @@ const animationDuration = 0.7;
 
 export default function Hero() {
   return (
-    <Grid id="home" container justifyContent="center" sx={{ marginTop: 20 }}>
-      <Grid item xs={9}>
+    <Grid id="home" container justifyContent="center" sx={{ marginTop: 18 }}>
+      <Grid item xs={12} sm={11} md={11} lg={9} xl={9}>
         <Grid container justifyContent="space-around">
           <Grid xs={11} sm={11} md={5} lg={5}>
             <Box sx={{ display: "flex" }}>
@@ -17,38 +17,38 @@ export default function Hero() {
                 color="primary"
                 sx={{
                   border: 4,
-                  borderColor: "secondary.light",
+                  borderColor: "primary.light",
                   borderRadius: 10,
                   marginTop: 0.6,
                 }}
               />
-              <Box sx={{ display: "flex", flexDirection: "column" }}>
-                <Typography variant="h5" color="text.primary" marginLeft={2}>
-                  Zerihun Tegenu
-                </Typography>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p className="ml-4 text-2xl font-bold">Zerihun Tegenu</p>
 
-                <Typography
-                  variant="subtitle"
-                  color="text.secondary"
-                  marginLeft={2}
-                >
-                  Fullstack Engineer
-                </Typography>
-              </Box>
+                <p className="ml-4 text-1xl ">Fullstack Engineer</p>
+              </div>
             </Box>
 
-            <p className="pt-8 text-5xl font-bold my-3">Let's Collaborate on</p>
+            <p className="pt-8 text-5xl font-bold my-1 leading-tight">
+              Let's Collaborate on
+            </p>
             <TextSlideUp
               words={words}
               animationDuration={animationDuration}
-              sx={{ background: "-webkit-linear-gradient(#2FD236, #7edb08)" }}
+              sx={{
+                color: "#2FD236",
+                textAlign: { xs: "center", sm: "left" },
+              }}
             />
             <p variant="subtitle" className="mt-20 ">
-              If you are looking for someone who have hand on experience in all
-              SDLC you are at the right place. Just contact me
+              Delivering seamless digital solutions with expertise in both
+              frontend and backend development as a fullstack engineer
             </p>
 
-            <div class="pt-14">
+            <div
+              class="py-14"
+              style={{ textAlign: { xs: "center", md: "left" } }}
+            >
               <a
                 href="#contact"
                 class="button-19 bg-gradient-to-r from-green-500 to-green-300 hover:from-green-700 hover:to-green-500 text-dark text-xl font-bold py-3 px-10 rounded-full shadow-lg"
@@ -57,11 +57,11 @@ export default function Hero() {
               </a>
 
               <a
-                href="/About.js"
-                className="text-primary hover:text-green-500  font-bold py-3 mx-10"
+                href="/assets/resume.pdf"
+                className="text-primary hover:text-green-500  font-bold py-3 mx-6"
                 download
               >
-                Download resume
+                Download CV
               </a>
             </div>
           </Grid>

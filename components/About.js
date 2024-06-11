@@ -11,8 +11,8 @@ export default function About() {
   const inView = UseIntersectionObserver(ref);
   return (
     <div id="about" ref={ref}>
-      <Grid container justifyContent="center" marginY={20}>
-        <Grid xs={9}>
+      <Grid container justifyContent="center" marginY={6}>
+        <Grid item xs={12} sm={11} md={11} lg={9} xl={9}>
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
@@ -33,7 +33,7 @@ export default function About() {
             >
               <Grid xs={12} sm={12} md={6} lg={4.6} xl={4.6}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <p class="text-3xl">About </p>
+                  <p class="text-3xl ml-4">About </p>
                   <p class="text-4xl font-bold ml-2 text-green-500">me</p>
                 </Box>
                 <img

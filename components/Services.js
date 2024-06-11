@@ -12,8 +12,8 @@ export default function Services() {
 
   return (
     <div id="services" ref={ref}>
-      <Grid container justifyContent="center" marginY={14}>
-        <Grid item xs={9}>
+      <Grid container justifyContent="center" marginY={10}>
+        <Grid item xs={11} sm={11} md={11} lg={9} xl={9}>
           <Grid
             container
             sx={{
@@ -41,7 +41,7 @@ export default function Services() {
                   </Box>
                 ) : (
                   <motion.div
-                    initial={{ x: 100, opacitx: 0 }}
+                    initial={{ x: 100, opacity: 0 }}
                     animate={
                       inView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }
                     }

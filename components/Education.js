@@ -17,8 +17,8 @@ export default function Education() {
   const inView = UseIntersectionObserver(ref);
   return (
     <div id="education" ref={ref}>
-      <Grid container justifyContent="center" marginY={20}>
-        <Grid xs={9}>
+      <Grid container justifyContent="center" marginY={6}>
+        <Grid item xs={11} sm={11} md={11} lg={9} xl={9}>
           <Grid
             container
             sx={{
@@ -27,7 +27,7 @@ export default function Education() {
               paddingTop: 6,
             }}
           >
-            <Grid xs={12} sm={12} md={5} lg={5} xl={5} sx={{ marginTop: 3 }}>
+            <Grid xs={12} sm={12} md={5} lg={5} xl={5} sx={{ marginY: 5 }}>
               <Grid
                 container
                 sx={{
@@ -39,7 +39,7 @@ export default function Education() {
                   <CreateIcon fontSize="large" sx={{ marginRight: 2 }} />
                 </Grid>
 
-                <Grid item xs={12} md={4.7}>
+                <Grid item xs={12} md={3.8}>
                   <p className="text-3xl">Education & </p>
                 </Grid>
 
@@ -63,8 +63,8 @@ export default function Education() {
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                   }
                   transition={{
-                    duration: 0.5,
-                    type: "tween",
+                    duration: 0.3,
+                    type: "spring",
                     stiffness: 110,
                     damping: 30,
                     delay: index * 0.1,
@@ -127,20 +127,20 @@ export default function Education() {
               <p className="text-3xl mt-6 "> Certificates </p>
               {CertificationData.map((certificate, index) => (
                 <motion.div
+                  key={index}
                   initial={{ y: 100, opacity: 0 }}
                   animate={
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                   }
                   transition={{
                     duration: 0.5,
-                    type: "tween",
+                    type: "spring",
                     stiffness: 110,
                     damping: 30,
                     delay: index * 0.1,
                   }}
                 >
                   <Box
-                    key={index}
                     sx={{
                       display: "flex",
                       alignItems: "center",
@@ -187,7 +187,7 @@ export default function Education() {
               ))}
             </Grid>
 
-            <Grid xs={12} sm={12} md={6} lg={6} xl={6} sx={{ marginTop: 3 }}>
+            <Grid xs={12} sm={12} md={6} lg={6} xl={6} sx={{ marginY: 5 }}>
               <Grid
                 container
                 sx={{
@@ -217,8 +217,8 @@ export default function Education() {
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                   }
                   transition={{
-                    duration: 0.5,
-                    type: "tween",
+                    duration: 0.3,
+                    type: "spring",
                     stiffness: 110,
                     damping: 30,
                     delay: index * 0.1,

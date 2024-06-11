@@ -22,27 +22,27 @@ export const TestimonialsData = [
     testimonial:
       "The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.",
   },
-  {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
-    name: "Julia Stewart",
-    occupation: "Senior Engineer",
-    testimonial:
-      "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
-  },
-  {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
-    name: "John Smith",
-    occupation: "Product Designer",
-    testimonial:
-      "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
-  },
-  {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: "Daniel Wolf",
-    occupation: "CDO",
-    testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
-  },
+  // {
+  //   avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
+  //   name: "Julia Stewart",
+  //   occupation: "Senior Engineer",
+  //   testimonial:
+  //     "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
+  // },
+  // {
+  //   avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
+  //   name: "John Smith",
+  //   occupation: "Product Designer",
+  //   testimonial:
+  //     "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
+  // },
+  // {
+  //   avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
+  //   name: "Daniel Wolf",
+  //   occupation: "CDO",
+  //   testimonial:
+  //     "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+  // },
 ];
 
 export const whiteLogos = [

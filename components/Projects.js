@@ -29,9 +29,14 @@ export default function Projects() {
 
   return (
     <div id="projects" ref={ref}>
-      <Grid container justifyContent="center" marginY={20}>
+      <Grid container justifyContent="center" marginY={10}>
         <Grid
-          xs={9}
+          item
+          xs={11}
+          sm={11}
+          md={11}
+          lg={9}
+          xl={9}
           sx={{
             border: 1,
             borderColor: theme.palette.primary.main,
@@ -61,7 +66,6 @@ export default function Projects() {
 
               <p class="text-1xl mt-4">
                 I had the opportunity to collaborate on the following projects
-                in different setting
               </p>
 
               {ProjectsData?.map((project, index) => (
@@ -71,7 +75,7 @@ export default function Projects() {
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
                   }
                   transition={{
-                    duration: 0.5,
+                    duration: 0.3,
                     type: "spring",
                     stiffness: 110,
                     damping: 30,
@@ -106,8 +110,8 @@ export default function Projects() {
                       <IconButton>
                         {expand === index ? (
                           <Check
-                            fontSize="small"
-                            sx={{ color: theme.palette.background.default }}
+                            fontSize="18px"
+                            sx={{ color: theme.palette.background.paper }}
                           />
                         ) : (
                           <ChevronRight fontSize="small" />
@@ -200,6 +204,7 @@ export default function Projects() {
                       <LinkSharp fontSize="18px" color="info" />
                       <Link
                         href={ProjectsData[expand].url}
+                        target="_blank"
                         class="text-1xl ml-2 mr-1 text-blue-500"
                       >
                         Link

@@ -9,8 +9,8 @@ export default function Skills() {
   const inView = UseIntersectionObserver(ref);
   return (
     <div id="skills" ref={ref}>
-      <Grid container justifyContent="center" marginY={20}>
-        <Grid xs={9}>
+      <Grid container justifyContent="center" marginY={10}>
+        <Grid item xs={11} sm={11} md={11} lg={9} xl={9}>
           <Grid
             container
             sx={{

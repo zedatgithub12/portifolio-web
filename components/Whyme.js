@@ -11,13 +11,14 @@ export default function Whyme() {
       <Grid
         container
         justifyContent="space-between"
-        marginY={14}
+        marginY={10}
         sx={{
           background: `linear-gradient(30deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-          padding: 8,
+          paddingY: 10,
+          paddingX: 2,
         }}
       >
-        <Grid item xs={12}>
+        <Grid item xs={11} sm={11} md={11} lg={9} xl={9}>
           <Grid container justifyContent="center">
             <Grid item xs={12} md={7}>
               <Grid
@@ -25,44 +26,20 @@ export default function Whyme() {
                 sx={{
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "flex-start",
                 }}
               >
-                <Grid item xs={12} md={5} sx={{ marginTop: 2 }}>
-                  <p class="text-2xl text-dark mr-4 pt-2">
+                <Grid item xs={12} md={6}>
+                  <p class="text-2xl text-dark pt-4">
                     I approach my job with total
                   </p>
                 </Grid>
-                <Grid item xs={12} md={3} sx={{ marginTop: 2 }}>
+                <Grid item xs={12} md={2}>
                   <TextSlideUp
                     words={words}
                     animationDuration={animationDuration}
                   />
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid
-              item
-              xs={2.4}
-              sx={{
-                position: "relative",
-                right: 1,
-                display: {
-                  xs: "none",
-                  sx: "none",
-                  lg: "flex",
-                },
-              }}
-            >
-              <img
-                src="/assets/flower.png"
-                alt="flower"
-                style={{
-                  position: "absolute",
-                  top: -170,
-                  right: 1,
-                }}
-              />
             </Grid>
           </Grid>
         </Grid>
