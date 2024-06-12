@@ -73,10 +73,6 @@ export default function Home() {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
-  const toggleCustomTheme = () => {
-    setShowCustomTheme((prev) => !prev);
-  };
-
   return (
     <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
       <CssBaseline />
@@ -94,10 +90,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </Box>
-      {/* <ToggleCustomTheme
-        showCustomTheme={showCustomTheme}
-        toggleCustomTheme={toggleCustomTheme}
-      /> */}
     </ThemeProvider>
   );
 }

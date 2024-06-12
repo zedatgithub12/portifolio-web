@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import ToggleColorMode from "@/ToggleColorMode";
+import Logo from "@/utils/Logo";
 
 const logoStyle = {
   width: "140px",
@@ -79,25 +80,22 @@ function WebAppBar({ mode, toggleColorMode }) {
               sx={{
                 flexGrow: 1,
                 display: "flex",
+                justifyContent: "space-between",
                 alignItems: "center",
                 ml: "-18px",
                 px: 0,
               }}
             >
-              <Typography
-                variant="h5"
-                color="primary"
-                sx={(logoStyle, { paddingX: 3 })}
-              >
-                zerihunT
-              </Typography>
+              <Logo
+                sx={{ width: 46, height: 30, marginLeft: 18, marginRight: 18 }}
+              />
 
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem
                   onClick={() => scrollToSection("about")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     About
                   </Typography>
                 </MenuItem>
@@ -105,7 +103,7 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("education")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Education
                   </Typography>
                 </MenuItem>
@@ -113,7 +111,7 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("skills")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Skills
                   </Typography>
                 </MenuItem>
@@ -121,7 +119,7 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("services")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Services
                   </Typography>
                 </MenuItem>
@@ -129,7 +127,7 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("projects")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Projects
                   </Typography>
                 </MenuItem>
@@ -138,7 +136,7 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("testimonials")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Testimonials
                   </Typography>
                 </MenuItem>
@@ -147,21 +145,26 @@ function WebAppBar({ mode, toggleColorMode }) {
                   onClick={() => scrollToSection("contact")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="subtitle2" color="text.primary">
                     Contact
                   </Typography>
                 </MenuItem>
               </Box>
+
+              <Box
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  gap: 0.5,
+                  alignItems: "center",
+                }}
+              >
+                <ToggleColorMode
+                  mode={mode}
+                  toggleColorMode={toggleColorMode}
+                />
+              </Box>
             </Box>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                gap: 0.5,
-                alignItems: "center",
-              }}
-            >
-              <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-            </Box>
+
             <Box sx={{ display: { sm: "", md: "none" } }}>
               <Button
                 variant="text"

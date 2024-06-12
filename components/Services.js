@@ -23,7 +23,7 @@ export default function Services() {
             }}
           >
             {MyServices?.map((service, index) => (
-              <Grid xs={12} sm={11} md={5.6} lg={3.6} xl={3.6}>
+              <Grid key={index} item xs={12} sm={11} md={5.6} lg={3.6} xl={3.6}>
                 {index === 0 ? (
                   <Box sx={{ marginTop: 2 }}>
                     <Box

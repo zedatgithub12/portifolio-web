@@ -8,6 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 import { SocialMedia } from "@/data/socialmedia";
+import Logo from "@/utils/Logo";
+import Image from "next/image";
 
 export default function Footer() {
   const scrollToSection = (sectionId) => {
@@ -38,7 +40,7 @@ export default function Footer() {
     >
       <Grid container>
         <Grid xs={12} sm={12} md={6} xl={4} lg={3}>
-          <p className="text-2xl mb-4">Logo</p>
+          <Logo sx={{ width: 80, height: 50, marginBottom: 10 }} />
           <Typography variant="body" sx={{ marginTop: 4 }}>
             Delivering seamless digital solutions with expertise in both
             frontend and backend development as a fullstack engineer
@@ -87,10 +89,11 @@ export default function Footer() {
                 rel="noreferrer"
                 className="m-2"
               >
-                <img
+                <Image
                   src={socialMedia.logo}
                   alt={socialMedia.name}
-                  style={{ width: 30, height: 30 }}
+                  width={30}
+                  height={30}
                 />
               </a>
             ))}

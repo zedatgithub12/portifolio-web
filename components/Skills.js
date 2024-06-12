@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import { skills } from "@/data/skills";
 import { motion } from "framer-motion";
 import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
+import Image from "next/image";
 
 export default function Skills() {
   const ref = useRef();
@@ -52,12 +53,12 @@ export default function Skills() {
                   }}
                   key={index}
                 >
-                  <img
+                  <Image
                     src={skill}
                     alt="tech stack"
+                    width={60}
+                    height={60}
                     style={{
-                      width: 60,
-                      height: 60,
                       aspectRatio: 1,
                       objectFit: "contain",
                       margin: 26,

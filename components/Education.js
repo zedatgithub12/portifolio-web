@@ -9,6 +9,7 @@ import CreateIcon from "@mui/icons-material/Create";
 import WorkIcon from "@mui/icons-material/Work";
 import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
+import Image from "next/image";
 
 export default function Education() {
   const theme = useTheme();
@@ -58,6 +59,7 @@ export default function Education() {
 
               {EducationData.map((educ, index) => (
                 <motion.div
+                  key={index}
                   initial={{ y: 100, opacity: 0 }}
                   animate={
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
@@ -71,7 +73,6 @@ export default function Education() {
                   }}
                 >
                   <Box
-                    key={index}
                     sx={{
                       padding: 3,
                       marginTop: 4,
@@ -112,7 +113,10 @@ export default function Education() {
                     </Box>
                     <Box sx={{ marginLeft: 5, marginTop: 2 }}>
                       {educ?.actions?.map((item, index) => (
-                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <div
+                          key={index}
+                          style={{ display: "flex", alignItems: "center" }}
+                        >
                           <Check fontSize="8" color="#ddd" />
                           <p key={index} className="ml-2 mt-2">
                             {item}
@@ -155,12 +159,12 @@ export default function Education() {
                           : theme.palette.background.default,
                     }}
                   >
-                    <img
+                    <Image
                       src={certificate.logo}
                       alt={certificate.what}
+                      width={30}
+                      height={30}
                       style={{
-                        width: 30,
-                        height: 30,
                         borderRadius: 15,
                         aspectRatio: 1,
                         objectFit: "contain",
@@ -212,6 +216,7 @@ export default function Education() {
 
               {Experiance.map((work, index) => (
                 <motion.div
+                  key={index}
                   initial={{ y: 100, opacity: 0 }}
                   animate={
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
@@ -225,7 +230,6 @@ export default function Education() {
                   }}
                 >
                   <Box
-                    key={index}
                     sx={{
                       padding: 3,
                       marginTop: 4,
@@ -270,7 +274,10 @@ export default function Education() {
                     </Box>
                     <Box sx={{ marginLeft: 5, marginTop: 2 }}>
                       {work?.actions?.map((item, index) => (
-                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <div
+                          style={{ display: "flex", alignItems: "center" }}
+                          key={index}
+                        >
                           <Check fontSize="8" color="#ddd" />
                           <p className="ml-2 mt-2" key={index}>
                             {item}

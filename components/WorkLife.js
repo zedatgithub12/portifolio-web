@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Box, useTheme } from "@mui/material";
 import EmojiSlide from "@/utils/EmojiSlide";
+import Image from "next/image";
 
 const Emojis = ["👨‍💻", "🍀", "⛅️", "🙏", "😊"];
 const animationDuration = 0.8;
@@ -38,9 +39,11 @@ export default function WorkLife() {
                     },
                   }}
                 >
-                  <img
+                  <Image
                     src="/assets/balance.png"
-                    alt="flower"
+                    alt="developer meditation"
+                    width={300}
+                    height={300}
                     style={{
                       position: "absolute",
                       top: -9,
@@ -51,7 +54,7 @@ export default function WorkLife() {
 
                 <Grid item xs={12} md={12} lg={8}>
                   <p class="text-2xl text-dark mr-4 pt-2">
-                    I don't do work life balance
+                    I don{`'`}t do work life balance
                   </p>
 
                   <Box sx={{ display: "flex" }}>

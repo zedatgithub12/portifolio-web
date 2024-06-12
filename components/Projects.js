@@ -11,6 +11,7 @@ import {
 } from "@mui/icons-material";
 import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Projects() {
   const theme = useTheme();
@@ -70,6 +71,7 @@ export default function Projects() {
 
               {ProjectsData?.map((project, index) => (
                 <motion.div
+                  key={index}
                   initial={{ y: 100, opacity: 0 }}
                   animate={
                     inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
@@ -85,7 +87,6 @@ export default function Projects() {
                   onClick={() => handleExpanding(index)}
                 >
                   <Box
-                    key={index}
                     sx={{
                       backgroundColor:
                         expand === index
@@ -218,13 +219,13 @@ export default function Projects() {
               <Box sx={{ display: "flex", flexWrap: "wrap", marginY: 2 }}>
                 {expand != null &&
                   ProjectsData[expand].stacks?.map((stack, index) => (
-                    <img
+                    <Image
                       key={index}
                       src={stack}
                       alt="tech stack"
+                      width={30}
+                      height={30}
                       style={{
-                        width: 30,
-                        height: 30,
                         aspectRatio: 1,
                         objectFit: "contain",
                         margin: 10,
@@ -238,13 +239,13 @@ export default function Projects() {
               <Box sx={{ display: "flex", flexWrap: "wrap", marginY: 2 }}>
                 {expand != null &&
                   ProjectsData[expand].screenshots?.map((stack, index) => (
-                    <img
+                    <Image
                       key={index}
                       src={stack}
                       alt="tech stack"
+                      width={222}
+                      height={240}
                       style={{
-                        width: 222,
-                        height: 240,
                         aspectRatio: 1,
                         objectFit: "contain",
                         margin: 6,

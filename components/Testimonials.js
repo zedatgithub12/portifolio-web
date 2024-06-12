@@ -8,10 +8,12 @@ import Grid from "@mui/material/Grid";
 import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
 import { useTheme } from "@mui/system";
 import { TestimonialsData, darkLogos, whiteLogos } from "@/data/testimonials";
+import Image from "next/image";
 
 const logoStyle = {
-  width: "64px",
-  opacity: 0.3,
+  aspectRatio: 1,
+  objectFit: "contain",
+  filter: "grayscale(70%)",
 };
 
 export default function Testimonials() {
@@ -52,6 +54,7 @@ export default function Testimonials() {
         >
           {TestimonialsData.map((testimonial, index) => (
             <Grid
+              key={index}
               item
               xs={11}
               sm={11}
@@ -75,6 +78,7 @@ export default function Testimonials() {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
+                  alignItems: "center",
                   justifyContent: "space-between",
                   pr: 2,
                 }}
@@ -84,10 +88,12 @@ export default function Testimonials() {
                   title={testimonial.name}
                   subheader={testimonial.occupation}
                 />
-                <img
+                <Image
                   src={logos[index]}
                   alt={`Logo ${index + 1}`}
                   style={logoStyle}
+                  width={50}
+                  height={50}
                 />
               </Box>
             </Grid>
