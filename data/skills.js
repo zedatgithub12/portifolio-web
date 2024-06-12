@@ -1,0 +1,21 @@
+export const skills = [
+  "/assets/stacks/html5.png",
+  "/assets/stacks/css.png",
+  "/assets/stacks/JS.png",
+  "/assets/stacks/reactjs.webp",
+  "/assets/stacks/reactnative.png",
+  "/assets/stacks/next.png",
+  "/assets/stacks/muilogo.png",
+  "/assets/stacks/axioss.png",
+  "/assets/stacks/aws.png",
+  "/assets/stacks/node.png",
+  "/assets/stacks/laravel.png",
+  "/assets/stacks/Mysql_logo.png",
+  "/assets/stacks/github.png",
+  "/assets/stacks/git.png",
+  "/assets/stacks/googleads.png",
+  "/assets/stacks/google_cloud.png",
+  "/assets/stacks/seo.png",
+  "/assets/stacks/analytics.png",
+
+];
