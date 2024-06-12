@@ -39,7 +39,7 @@ export default function Education() {
                   <CreateIcon fontSize="large" sx={{ marginRight: 2 }} />
                 </Grid>
 
-                <Grid item xs={12} md={3.8}>
+                <Grid item xs={12} md={4.6}>
                   <p className="text-3xl">Education & </p>
                 </Grid>
 

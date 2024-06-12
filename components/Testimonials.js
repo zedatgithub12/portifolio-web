@@ -55,9 +55,9 @@ export default function Testimonials() {
               item
               xs={11}
               sm={11}
-              md={4}
-              lg={3}
-              xl={3}
+              md={3.6}
+              lg={3.6}
+              xl={3.6}
               sx={{
                 display: "flex",
                 flexDirection: "column",
