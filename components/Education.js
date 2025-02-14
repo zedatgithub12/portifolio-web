@@ -10,6 +10,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
 import UseIntersectionObserver from "@/utils/UseIntersectionObserver";
 import Image from "next/image";
+import Beacon from "./mini-comonents/Beacon";
 
 export default function Education() {
   const theme = useTheme();
@@ -77,6 +78,7 @@ export default function Education() {
                       padding: 3,
                       marginTop: 4,
                       boxShadow: 1,
+                      boxShadow: "0px 2px 8px #4441",
                       borderRadius: 5,
                       backdropFilter: "blur(12px)",
                       backgroundColor:
@@ -151,6 +153,7 @@ export default function Education() {
                       padding: 2,
                       marginTop: 4,
                       boxShadow: 1,
+                      boxShadow: "0px 2px 8px #4441",
                       borderRadius: 5,
                       backdropFilter: "blur(12px)",
                       backgroundColor:
@@ -234,15 +237,24 @@ export default function Education() {
                       padding: 3,
                       marginTop: 4,
                       boxShadow: 1,
+                      boxShadow: "0px 2px 8px #4441",
                       borderRadius: 5,
                       backdropFilter: "blur(12px)",
                       backgroundColor:
-                        theme.palette.mode === "dark"
+                        work.end === "Present"
+                          ? theme.palette.primary.light
+                          : theme.palette.mode === "dark"
                           ? theme.palette.background.paper
                           : theme.palette.background.default,
+
+                      color: work.end === "Present" && "#000",
                     }}
                   >
-                    <p className="text-1xl ml-10">{work.setup}</p>
+                    <div className="flex items-center justify-between">
+                      <p className="text-1xl ml-10">{work.setup}</p>
+
+                      {work.end === "Present" ? <Beacon /> : null}
+                    </div>
                     <Box
                       sx={{
                         display: "flex",

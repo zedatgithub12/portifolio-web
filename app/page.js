@@ -19,19 +19,17 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [mode, setMode] = React.useState("light");
-  const [showCustomTheme] = React.useState(true);
+  const [mode, setMode] = React.useState("dark");
   const LPtheme = createTheme(getLPTheme(mode));
-  const defaultTheme = createTheme({ palette: { mode } });
 
   const toggleColorMode = () => {
     setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
-    <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
+    <ThemeProvider theme={LPtheme}>
       <CssBaseline />
-      <Box sx={{ bgcolor: "background.default" }}>
+      <Box>
         <WebAppBar mode={mode} toggleColorMode={toggleColorMode} />
         <Hero />
         <About />

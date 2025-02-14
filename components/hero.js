@@ -26,12 +26,12 @@ export default function Hero() {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <p className="ml-4 text-2xl font-bold">Zerihun Tegenu</p>
 
-                <p className="ml-4 text-1xl ">Fullstack Engineer</p>
+                <p className="ml-4 text-1xl ">Senior Frontend Engineer</p>
               </div>
             </Box>
 
             <p className="pt-3 text-5xl font-bold my-1 leading-tight">
-              Let{`'`}s Collaborate on
+              Let&apos;s Collaborate on
             </p>
             <TextSlideUp
               words={words}
@@ -73,36 +73,29 @@ export default function Hero() {
             lg={6}
             sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "flex" } }}
           >
-            <Box
+            {/* <Box
               sx={{
                 backgroundColor: "#fff4",
                 backdropFilter: "blur(12px)",
                 borderRadius: 4,
               }}
-            >
-              <Image
-                src="/assets/developer-working.png"
-                alt="developer-working"
-                style={{
-                  borderRadius: 2,
-                  boxShadow: 1,
-                  minHeight: 200,
-                  marginTop: -10,
-                  aspectRatio: 1,
-                  objectFit: "cover",
-                }}
-                width={400}
-                height={400}
-              />
-              {/* <iframe
-                width="100%"
-                height="300"
-                src="https://www.youtube.com/embed/YZ5tOe7y9x4"
-                title="Personal Introduction"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                style={{ borderRadius: 2 }}
-              ></iframe> */}
-            </Box>
+            > */}
+            <Image
+              src="/assets/developer-working.png"
+              alt="developer-working"
+              style={{
+                borderRadius: 2,
+                boxShadow: 1,
+                minHeight: 200,
+                marginTop: -10,
+                aspectRatio: 1 / 1,
+                objectFit: "cover",
+              }}
+              width={400}
+              height={400}
+            />
+
+            {/* </Box> */}
           </Grid>
         </Grid>
       </Grid>
