@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Box, useTheme } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import TextSlideUp from "@/utils/TextSlideUp";
 
 const words = ["Accountablity", "Dedication", "Creativity"];
-const animationDuration = 0.5;
+const animationDuration = 0.8;
 export default function Whyme() {
   const theme = useTheme();
   return (
@@ -37,6 +37,7 @@ export default function Whyme() {
                   <TextSlideUp
                     words={words}
                     animationDuration={animationDuration}
+                    sx={{ color: theme.palette.primary.dark }}
                   />
                 </Grid>
               </Grid>

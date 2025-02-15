@@ -40,7 +40,6 @@ export const Experiance = [
     actions: [
       "Collaborated with the client to understand their need and convert it to the actual product",
       "Lead the development of the product frontend and backend",
-      "Deployed the product and i have been system admin for six months",
     ],
   },
 

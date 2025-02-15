@@ -4,8 +4,6 @@ import {
   Cloud,
   Code,
   DesignServices,
-  Grid3x3,
-  GridGoldenratio,
   GridViewSharp,
   Support,
 } from "@mui/icons-material";

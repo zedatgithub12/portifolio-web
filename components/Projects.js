@@ -33,7 +33,7 @@ export default function Projects() {
       <Grid container justifyContent="center" marginY={10}>
         <Grid
           item
-          xs={11}
+          xs={11.4}
           sm={11}
           md={11}
           lg={9}
@@ -42,6 +42,7 @@ export default function Projects() {
             border: 1,
             borderColor: theme.palette.primary.main,
             borderRadius: 4,
+            overflow: "hidden",
           }}
         >
           <Grid
@@ -69,59 +70,66 @@ export default function Projects() {
                 I had the opportunity to collaborate on the following projects
               </p>
 
-              {ProjectsData?.map((project, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ y: 100, opacity: 0 }}
-                  animate={
-                    inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }
-                  }
-                  transition={{
-                    duration: 0.3,
-                    type: "spring",
-                    stiffness: 110,
-                    damping: 30,
-                    delay: index * 0.1,
-                  }}
-                  style={{ cursor: "pointer" }}
-                  onClick={() => handleExpanding(index)}
-                >
-                  <Box
-                    sx={{
-                      backgroundColor:
-                        expand === index
-                          ? theme.palette.primary.main
-                          : theme.palette.primary.contrastText,
-                      border: 1,
-                      borderColor: theme.palette.primary.main,
-                      borderRadius: 3,
-                      marginTop: 3,
-                      transition: "all 1s ease",
+              <div className="flex gap-3 lg:block xl:block items-center overflow-x-auto lg:overflow-x-hidden xl:overflow-x-hidden scrollbar-hide">
+                {ProjectsData?.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ y: 60, opacity: 0 }}
+                    animate={
+                      inView ? { y: 0, opacity: 1 } : { y: 60, opacity: 0 }
+                    }
+                    transition={{
+                      duration: 0.3,
+                      type: "spring",
+                      stiffness: 110,
+                      damping: 30,
+                      delay: index * 0.1,
                     }}
+                    style={{
+                      cursor: "pointer",
+                      minWidth: { xs: "300px", sm: "300px", md: "300px" },
+                    }}
+                    onClick={() => handleExpanding(index)}
                   >
                     <Box
                       sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        paddingX: 0.5,
+                        backgroundColor:
+                          expand === index
+                            ? theme.palette.primary.main
+                            : theme.palette.primary.contrastText,
+                        border: 1,
+                        borderColor: theme.palette.primary.main,
+                        borderRadius: 3,
+                        marginTop: 3,
+                        transition: "all 1s ease",
                       }}
                     >
-                      <p class="text-1xl font-bold p-3">{project.title}</p>
-                      <IconButton>
-                        {expand === index ? (
-                          <Check
-                            fontSize="18px"
-                            sx={{ color: theme.palette.background.paper }}
-                          />
-                        ) : (
-                          <ChevronRight fontSize="small" />
-                        )}
-                      </IconButton>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          paddingX: 0.5,
+                        }}
+                      >
+                        <p className="text-1xl font-bold p-3 truncate w-full  text-ellipsis">
+                          {project.title}
+                        </p>
+                        <IconButton>
+                          {expand === index ? (
+                            <Check
+                              fontSize="16px"
+                              sx={{ color: theme.palette.background.paper }}
+                            />
+                          ) : (
+                            <ChevronRight fontSize="small" />
+                          )}
+                        </IconButton>
+                      </Box>
                     </Box>
-                  </Box>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </Grid>
             <Grid
               xs={12}
@@ -206,7 +214,7 @@ export default function Projects() {
                       <Link
                         href={ProjectsData[expand].url}
                         target="_blank"
-                        class="text-1xl ml-2 mr-1 text-blue-500"
+                        class="text-1xl ml-2 text-blue-500 "
                       >
                         Link
                       </Link>
