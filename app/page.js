@@ -19,7 +19,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [mode, setMode] = React.useState("dark");
+  const [mode, setMode] = React.useState("light");
   const LPtheme = createTheme(getLPTheme(mode));
 
   const toggleColorMode = () => {

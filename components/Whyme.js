@@ -37,7 +37,7 @@ export default function Whyme() {
                   <TextSlideUp
                     words={words}
                     animationDuration={animationDuration}
-                    sx={{ color: theme.palette.primary.dark }}
+                    sx={{ color: "#fff" }}
                   />
                 </Grid>
               </Grid>

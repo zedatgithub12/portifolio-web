@@ -1,53 +1,88 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-const TextSlideUp = ({ words, animationDuration, sx }) => {
+const TextSlideUp = ({ words, animationDuration = 0.5, sx = {} }) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, animationDuration * 4000);
+    }, animationDuration * 4200);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [animationDuration, words.length]);
+
+  const word = words[currentWordIndex];
+
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
+        position: "relative",
+        height: "4em",
+        marginTop: 14,
+        // overflow: "hidden", // Ensure the overflowing text is hidden
+        ...sx,
       }}
     >
-      {words.map((word, index) => (
+      <AnimatePresence mode="wait">
         <motion.span
-          key={index}
-          class="text-5xl font-bold"
+          key={word}
+          className="text-5xl font-bold"
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{
+            y: "0%",
+            opacity: 1,
+            transition: {
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+            },
+          }}
+          exit={{
+            y: "-100%",
+            opacity: 0,
+            transition: {
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+            },
+          }}
+          transition={{
+            duration: animationDuration,
+            ease: "easeInOut",
+          }}
           style={{
             position: "absolute",
-            lineHeight: 1.2,
-            overflow: "hidden",
-            ...sx,
+            width: "100%",
+            textAlign: "left",
+            lineHeight: 0.8,
+            whiteSpace: "nowrap", // Prevent text from wrapping
           }}
-          initial={{
-            y: index === currentWordIndex ? -100 : 0,
-            opacity: index === currentWordIndex ? 1 : 0,
-          }}
-          animate={
-            index === currentWordIndex
-              ? { y: 0, opacity: 1 }
-              : { y: -18, opacity: 0 }
-          }
-          transition={{
-            type: "keyframes",
-            damping: 60,
-            stiffness: 120,
-            duration: animationDuration,
-          }}
-          exit={{ y: -14, opacity: 0 }}
         >
-          {word}
+          {word.split("").map((letter, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  delay: index * 0.05,
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
+              }}
+              exit={{
+                opacity: 0,
+                x: 20,
+                transition: { duration: 0.2, ease: "easeIn" },
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
         </motion.span>
-      ))}
+      </AnimatePresence>
     </div>
   );
 };

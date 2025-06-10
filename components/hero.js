@@ -2,6 +2,7 @@ import TextSlideUp from "@/utils/TextSlideUp";
 import { CircleRounded } from "@mui/icons-material";
 import { Grid, Box, Typography } from "@mui/material";
 import Image from "next/image";
+import PixarText from "./mini-comonents/TextAnimation";
 
 const words = ["Designing", "Development", "Testing"];
 const animationDuration = 0.7;
@@ -9,7 +10,7 @@ const animationDuration = 0.7;
 export default function Hero() {
   return (
     <Grid id="home" container justifyContent="center" sx={{ marginTop: 16 }}>
-      <Grid item xs={12} sm={11} md={11} lg={9} xl={9}>
+      <Grid item xs={12} sm={11} md={11} lg={11} xl={11}>
         <Grid container justifyContent="space-around">
           <Grid xs={11} sm={11} md={5} lg={5}>
             <Box sx={{ display: "flex" }}>
@@ -23,6 +24,7 @@ export default function Hero() {
                   marginTop: 0.8,
                 }}
               />
+
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <p className="ml-4 text-2xl font-bold">Zerihun Tegenu</p>
 
@@ -41,7 +43,7 @@ export default function Hero() {
                 textAlign: { xs: "center", sm: "left" },
               }}
             />
-            <p variant="subtitle" className="mt-20 ">
+            <p variant="subtitle" className="mt-4 ">
               Delivering seamless digital solutions with expertise in both
               frontend and backend development as a fullstack engineer
             </p>
