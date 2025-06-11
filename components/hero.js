@@ -9,9 +9,14 @@ const animationDuration = 0.7;
 
 export default function Hero() {
   return (
-    <Grid id="home" container justifyContent="center" sx={{ marginTop: 16 }}>
+    <Grid
+      id="home"
+      container
+      justifyContent="center"
+      sx={{ marginTop: 16, pl: 4 }}
+    >
       <Grid item xs={12} sm={11} md={11} lg={11} xl={11}>
-        <Grid container justifyContent="space-around">
+        <Grid container justifyContent="space-between">
           <Grid xs={11} sm={11} md={5} lg={5}>
             <Box sx={{ display: "flex" }}>
               <CircleRounded
@@ -44,8 +49,9 @@ export default function Hero() {
               }}
             />
             <p variant="subtitle" className="mt-4 ">
-              Delivering seamless digital solutions with expertise in both
-              frontend and backend development as a fullstack engineer
+              Senior Frontend Engineer who loves building smooth, user-friendly
+              web experiences. I turn complex ideas into clean, responsive
+              interfaces. Let&apos;s create something awesome together!
             </p>
 
             <div
@@ -83,7 +89,7 @@ export default function Hero() {
               }}
             > */}
             <Image
-              src="/assets/developer-working.png"
+              src="/assets/images/developer.gif"
               alt="developer-working"
               style={{
                 borderRadius: 2,
@@ -95,6 +101,7 @@ export default function Hero() {
               }}
               width={400}
               height={400}
+              priority
             />
 
             {/* </Box> */}

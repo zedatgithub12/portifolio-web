@@ -158,10 +158,10 @@ function WebAppBar({ mode, toggleColorMode }) {
                   alignItems: "center",
                 }}
               >
-                <ToggleColorMode
+                {/* <ToggleColorMode
                   mode={mode}
                   toggleColorMode={toggleColorMode}
-                />
+                /> */}
               </Box>
             </Box>
 
