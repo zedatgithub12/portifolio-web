@@ -7,7 +7,7 @@ const TextSlideUp = ({ words, animationDuration = 0.5, sx = {} }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, animationDuration * 4200);
+    }, animationDuration * 2800);
 
     return () => clearInterval(interval);
   }, [animationDuration, words.length]);
@@ -20,7 +20,6 @@ const TextSlideUp = ({ words, animationDuration = 0.5, sx = {} }) => {
         position: "relative",
         height: "4em",
         marginTop: 14,
-        // overflow: "hidden", // Ensure the overflowing text is hidden
         ...sx,
       }}
     >

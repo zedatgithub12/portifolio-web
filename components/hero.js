@@ -1,13 +1,16 @@
 import TextSlideUp from "@/utils/TextSlideUp";
 import { CircleRounded } from "@mui/icons-material";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 import PixarText from "./mini-comonents/TextAnimation";
+import { useMediaQuery } from "@mui/material";
 
 const words = ["Designing", "Development", "Testing"];
 const animationDuration = 0.7;
 
 export default function Hero() {
+  const theme = useTheme();
+  const smallDevice = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Grid
       id="home"
@@ -15,7 +18,16 @@ export default function Hero() {
       justifyContent="center"
       sx={{ marginTop: 16, pl: 4 }}
     >
-      <Grid item xs={12} sm={11} md={11} lg={11} xl={11}>
+      <Grid
+        item
+        xs={12}
+        sm={11}
+        md={11}
+        lg={11}
+        xl={11}
+        justifyContent="center"
+        // sx={{ bgcolor: "green" }}
+      >
         <Grid container justifyContent="space-between">
           <Grid xs={11} sm={11} md={5} lg={5}>
             <Box sx={{ display: "flex" }}>
@@ -37,17 +49,19 @@ export default function Hero() {
               </div>
             </Box>
 
-            <p className="pt-3 text-5xl font-bold my-1 leading-tight">
-              Let&apos;s Collaborate on
+            <p className="pt-3 text-4xl md:text-5xl font-bold my-1 leading-tight">
+              Let&apos;s {smallDevice ? <br /> : ""} Collaborate on
             </p>
-            <TextSlideUp
-              words={words}
-              animationDuration={animationDuration}
-              sx={{
-                color: "#2FD236",
-                textAlign: { xs: "center", sm: "left" },
-              }}
-            />
+            <span>
+              <TextSlideUp
+                words={words}
+                animationDuration={animationDuration}
+                sx={{
+                  color: "#2FD236",
+                  textAlign: { xs: "center", sm: "left" },
+                }}
+              />
+            </span>
             <p variant="subtitle" className="mt-4 ">
               Senior Frontend Engineer who loves building smooth, user-friendly
               web experiences. I turn complex ideas into clean, responsive
@@ -79,15 +93,11 @@ export default function Hero() {
             sm={11}
             md={6}
             lg={6}
-            sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "flex" } }}
+            sx={{
+              display: { xs: "none", sm: "none", md: "flex", lg: "flex" },
+              pl: 1,
+            }}
           >
-            {/* <Box
-              sx={{
-                backgroundColor: "#fff4",
-                backdropFilter: "blur(12px)",
-                borderRadius: 4,
-              }}
-            > */}
             <Image
               src="/assets/images/developer.gif"
               alt="developer-working"
@@ -103,8 +113,6 @@ export default function Hero() {
               height={400}
               priority
             />
-
-            {/* </Box> */}
           </Grid>
         </Grid>
       </Grid>
